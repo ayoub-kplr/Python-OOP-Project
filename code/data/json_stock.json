@@ -1,1 +1,1 @@
-"{'1': {'product': <classes.product_classes.Vetements object at 0x7f657394d210>, 'quantity': 1, 'sales': 0, 'expenses': 0}}"
+"{'Vetements10466': {'product': <classes.product_classes.Vetements object at 0x7f48b3f76ce0>, 'quantity': 1, 'sales': 0, 'expenses': 0}, 'Vetements17141': {'product': <classes.product_classes.Vetements object at 0x7f48b4129210>, 'quantity': 1, 'sales': 0, 'expenses': 0}}"

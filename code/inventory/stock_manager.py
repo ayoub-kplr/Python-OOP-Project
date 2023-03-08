@@ -75,8 +75,8 @@ class InventoryManager:
 			pass
 		else:
 			inventory_product_entry = InventoryProductEntry(product, quantity).__dict__
-			# self.inventory[product.name + str(random.randint(1,100200))]=inventory_product_entry
-			self.inventory[product.ref]=inventory_product_entry
+			self.inventory[product.name + str(random.randint(10000,20000))]=inventory_product_entry
+			# self.inventory[product.ref]=inventory_product_entry
 			json_object = json.dumps(str(self.inventory))
 			print(json_object)
 			with open("code/data/json_stock.json", "w") as outfile:
