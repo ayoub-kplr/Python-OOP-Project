@@ -1,3 +1,5 @@
+import json
+import random
 import sys
 sys.path.extend(['.','..'])
 from classes import *
@@ -72,8 +74,13 @@ class InventoryManager:
 			"Ce produit existe déja. (Une seule référence par produit)"
 			pass
 		else:
-			inventory_product_entry = InventoryProductEntry(product, quantity)
-			self.inventory[product.name]=inventory_product_entry
+			inventory_product_entry = InventoryProductEntry(product, quantity).__dict__
+			# self.inventory[product.name + str(random.randint(1,100200))]=inventory_product_entry
+			self.inventory[product.ref]=inventory_product_entry
+			json_object = json.dumps(str(self.inventory))
+			print(json_object)
+			with open("code/data/json_stock.json", "w") as outfile:
+				outfile.write(json_object)
 			
 	def remove_product(self, product:Product):
 		if self.product_exists(product):
